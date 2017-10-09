@@ -1,17 +1,27 @@
-inFiles = [r'D:\Dev\TweeterProductRankerGithub\Project\MidResults\res_2015_01_01.txt',
-           r'D:\Dev\TweeterProductRankerGithub\Project\MidResults\res_2015_01_02.txt',
-           r'D:\Dev\TweeterProductRankerGithub\Project\MidResults\res_2015_02_01.txt',
-           r'D:\Dev\TweeterProductRankerGithub\Project\MidResults\res_2015_02_02.txt',
-           r'D:\Dev\TweeterProductRankerGithub\Project\MidResults\res_2015_03_01.txt',
-           r'D:\Dev\TweeterProductRankerGithub\Project\MidResults\res_2015_03_02.txt'
-           ]
-outFiles = [r'D:\Dev\TweeterProductRankerGithub\Project\MidResults\2015_01_01_map.csv',
-            r'D:\Dev\TweeterProductRankerGithub\Project\MidResults\2015_01_02_map.csv',
-            r'D:\Dev\TweeterProductRankerGithub\Project\MidResults\2015_02_01_map.csv',
-            r'D:\Dev\TweeterProductRankerGithub\Project\MidResults\2015_02_02_map.csv',
-            r'D:\Dev\TweeterProductRankerGithub\Project\MidResults\2015_03_01_map.csv',
-            r'D:\Dev\TweeterProductRankerGithub\Project\MidResults\2015_03_02_map.csv'
-           ]
+# inFiles = [r'D:\Dev\TweeterProductRankerGithub\Project\MidResults\res_2015_01_01.txt',
+#            r'D:\Dev\TweeterProductRankerGithub\Project\MidResults\res_2015_01_02.txt',
+#            r'D:\Dev\TweeterProductRankerGithub\Project\MidResults\res_2015_02_01.txt',
+#            r'D:\Dev\TweeterProductRankerGithub\Project\MidResults\res_2015_02_02.txt',
+#            r'D:\Dev\TweeterProductRankerGithub\Project\MidResults\res_2015_03_01.txt',
+#            r'D:\Dev\TweeterProductRankerGithub\Project\MidResults\res_2015_03_02.txt'
+#            ]
+# outFiles = [r'D:\Dev\TweeterProductRankerGithub\Project\MidResults\2015_01_01_map.csv',
+#             r'D:\Dev\TweeterProductRankerGithub\Project\MidResults\2015_01_02_map.csv',
+#             r'D:\Dev\TweeterProductRankerGithub\Project\MidResults\2015_02_01_map.csv',
+#             r'D:\Dev\TweeterProductRankerGithub\Project\MidResults\2015_02_02_map.csv',
+#             r'D:\Dev\TweeterProductRankerGithub\Project\MidResults\2015_03_01_map.csv',
+#             r'D:\Dev\TweeterProductRankerGithub\Project\MidResults\2015_03_02_map.csv'
+#            ]
+
+inFiles = [r'D:\Dev\TweeterProductRankerGithub\Project\FromMenash\res_2015_06_02.txt']
+outFiles = [r'D:\Dev\TweeterProductRankerGithub\Project\FromMenash\2015_06_02_map.csv']
+#             r'D:\Dev\TweeterProductRankerGithub\Project\MidResults\2015_01_02_map.csv',
+#             r'D:\Dev\TweeterProductRankerGithub\Project\MidResults\2015_02_01_map.csv',
+#             r'D:\Dev\TweeterProductRankerGithub\Project\MidResults\2015_02_02_map.csv',
+#             r'D:\Dev\TweeterProductRankerGithub\Project\MidResults\2015_03_01_map.csv',
+#             r'D:\Dev\TweeterProductRankerGithub\Project\MidResults\2015_03_02_map.csv'
+#            ]
+
 # r'D:\Dev\TweeterProductRankerGithub\Project\MidResults\res_2015_02_01_fixed.txt',
 from nltk.probability import FreqDist
 from nltk.corpus import stopwords
@@ -54,6 +64,17 @@ def CalculateFreqDist(input_file, output_file):
             # words_set = set(words)
 
 
+def printFirstTwoLines():
+    print('Openinig file: ' + 'D:\Dev\TweeterProductRankerGithub\Project\FromMenash\res_2015_04_01.txt')
+    fIn = open(r'D:\Dev\TweeterProductRankerGithub\Project\FromMenash\res_2015_04_01.txt', 'r')
+    words = []
+    index =  0
+    for line in fIn:
+        if index < 10:
+            index += 1
+            my_list = line.split(" ")
+            for word in my_list:
+                print(' ' + word)
 
 def CreateTmpFile():
     print('Openinig file: ' + inFiles[0])
@@ -102,7 +123,8 @@ def ConvertThreeToTwo():
 # ----------------- Two files out of three code for three files
 # ConvertThreeToTwo()
 # CreateTmpFile()
+# printFirstTwoLines()
 index = 0
 for file in inFiles:
-    CalculateFreqDist(inFiles[index],inFiles[index])
+    CalculateFreqDist(inFiles[index],outFiles[index])
     index+=1

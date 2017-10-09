@@ -1,0 +1,1 @@
+.\mongoimport.exe -d testDb -c 2015_01_02 --host=127.0.0.1:27017 --type CSV -file 2015_01_02_map.csv --fields "word,count"
