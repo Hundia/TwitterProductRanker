@@ -7,7 +7,7 @@ Introduction
 In this project we mined tweeter data in order to compare topic popularities comparing to google trends in corresponding timelines.
 The assumption is that people tweet as they search, and that mining tweets in a given period of time will give similar behavior when it comes to the amount of tweets / search in tweeter / google search by web users.
 In this project we learned how to work with tweeter large database (~1000 GIGA Bytes of tweets) and focused on the first year of 2015.
-We compared our results to google trends for a wide veriaty of topics from different aspects of our society.
+We compared our results to google trends for a wide variety of topics from different aspects of our society.
 It appears, that people tweet as they search.
 
 Database
