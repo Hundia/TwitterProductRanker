@@ -16,7 +16,7 @@ The twitter database was given to me by Haifa Univercity CS department and inclu
 
 The Project
 -----------
-The project is python based for most of the analysis, has a NodeJs server accompenied by a MongoDB database for easy storing and querying of our research results.
+The project is python based for most of the analysis, has a NodeJs server accompenied by a MongoDB database for easy storing and querying of our research results. At first we attempted to work with Hadoop, but eventually decided to simply manually reduce the DB files using multi-processed based python application.
 
 Results
 -------
@@ -29,4 +29,5 @@ https://drive.google.com/open?id=0B1cisIvB7e8paVlKTkV5T2w4TDl3MGNWcVpFeUk1Y2FvZX
 
 Contact
 -------
-Eli.Hundia@Gmail.com
+Mail: Eli.Hundia@gmail.com
+Web:  https://elihu.000webhostapp.com/
